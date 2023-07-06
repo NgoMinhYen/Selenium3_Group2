@@ -3,6 +3,7 @@ package core.framework.browsers.chrome;
 import core.framework.browsers.IWebDriver;
 import core.framework.commons.Constant;
 import core.framework.driver.DriverProperty;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,8 +22,8 @@ public class LocalChromeDriver implements IWebDriver {
     public WebDriver createWebDriver(DriverProperty property) {
 
         try {
-            System.setProperty(Constant.CHROME_SYSTEM_PROPERTY, property.getDriverPath());
-
+            //System.setProperty(Constant.CHROME_SYSTEM_PROPERTY, property.getDriverPath());
+            WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments(property.getArguments());
             options.setHeadless(property.isHeadless());

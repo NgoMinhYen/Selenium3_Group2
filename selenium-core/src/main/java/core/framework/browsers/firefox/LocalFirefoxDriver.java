@@ -3,6 +3,7 @@ package core.framework.browsers.firefox;
 import core.framework.browsers.IWebDriver;
 import core.framework.commons.Constant;
 import core.framework.driver.DriverProperty;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,8 +22,8 @@ public class LocalFirefoxDriver implements IWebDriver {
     @Override
     public WebDriver createWebDriver(DriverProperty property) {
         try {
-            System.setProperty(Constant.FIREFOX_WEBDRIVER_PROPERTY, property.getDriverPath());
-
+            //System.setProperty(Constant.FIREFOX_WEBDRIVER_PROPERTY, property.getDriverPath());
+            WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments(property.getArguments());
             options.setHeadless(property.isHeadless());

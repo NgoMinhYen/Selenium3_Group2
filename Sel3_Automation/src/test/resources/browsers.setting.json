@@ -5,6 +5,7 @@
         "headless": false,
         "driverPath": "executables\\win\\chromedriver.exe",
         "arguments": [
+            "--remote-allow-origins=*"
         ],
         "capabilities": {
         }
