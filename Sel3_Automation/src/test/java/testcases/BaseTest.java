@@ -18,8 +18,8 @@ import java.util.Objects;
 
 public class BaseTest {
 
-    protected     Logger logger                  = new Logger();
-    private final String DEFAULT_BROWSER_SETTING = "windows.chrome.local";
+    protected Logger logger = new Logger();
+    private final String DEFAULT_BROWSER_SETTING = "windows.edge.remote";
 
     private ThreadLocal<DriverProperty> thDriverProperty = new ThreadLocal<>();
 
@@ -36,19 +36,22 @@ public class BaseTest {
 
         DriverProperty property = Utilities.loadBrowserSetting(Constant.BROWSER_SETTING_PATH, browserSetting);
         thDriverProperty.set(property);
-        Driver.initWebDriver(property);
-        Driver.maximize();
+        openBrowser();
+//        Driver.initWebDriver(property);
+//        Driver.maximize();
 //        Driver.navigateTo(Constant.URL);
     }
 
     public void openBrowser() {
         Driver.initWebDriver(thDriverProperty.get());
-        Driver.maximize();
+        if(!thDriverProperty.get().isHeadless()) {
+            Driver.maximize();
+        }
     }
 
     @AfterMethod(alwaysRun = true)
     public void quiteBrowser(ITestResult result) throws IOException {
-        Driver.quitBrowser();
+//        Driver.quitBrowser();
     }
 
 
