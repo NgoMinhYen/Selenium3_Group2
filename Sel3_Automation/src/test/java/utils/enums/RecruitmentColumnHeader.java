@@ -1,9 +1,6 @@
 package utils.enums;
 
-/**
- * @author DungHa
- * @Date 25/10/2022
- */
+
 public enum RecruitmentColumnHeader {
     VACANCY("Vacancy"),
     CANDIDATE("Candidate"),

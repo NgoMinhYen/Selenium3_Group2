@@ -22,7 +22,6 @@ public interface IElement {
 
     List<String> getTextList();
 
-    // xem lai
     List<WebElement> getElements();
 
     String getText(long timeOut);

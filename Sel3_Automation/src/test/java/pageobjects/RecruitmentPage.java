@@ -5,10 +5,7 @@ import core.framework.elements.IElement;
 import core.framework.locator.Locator;
 import utils.enums.RecruitmentColumnHeader;
 
-/**
- * @author DungHa
- * @Date 11/10/2022
- */
+
 public class RecruitmentPage extends AbstractPage {
     private static RecruitmentPage instance                 = null;
     private        IElement        btnAdd                   = new Element(Locator.xpath("//div[@class='orangehrm-header-container']/button[//text()[normalize-space() = 'Add']]"));

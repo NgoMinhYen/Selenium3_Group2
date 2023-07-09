@@ -18,8 +18,6 @@ import static io.qameta.allure.Allure.getLifecycle;
 /**
  * Custom logger
  *
- * @author DungHa
- * @Date 11/10/2022
  */
 public class Logger {
     private static final org.apache.logging.log4j.Logger logger = LogManager.getLogger(Logger.class);

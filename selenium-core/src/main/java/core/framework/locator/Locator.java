@@ -1,11 +1,6 @@
 package core.framework.locator;
 
 import org.openqa.selenium.By;
-/**
- * @author YenNgo
- * @Date 09/10/2022
- *
- */
 
 public class Locator {
 

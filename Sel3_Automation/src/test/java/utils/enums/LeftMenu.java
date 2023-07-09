@@ -1,10 +1,7 @@
 package utils.enums;
 
 
-/**
- * @author DungHa
- * @Date 11/10/2022
- */
+
 public enum LeftMenu {
     ADMIN("Admin"),
     PIM("PIM"),

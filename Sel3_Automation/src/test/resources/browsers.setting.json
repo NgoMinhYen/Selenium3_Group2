@@ -1,6 +1,6 @@
 {
     "windows.chrome.local": {
-        "mode": "Local",
+        "isRemote": false,
         "browser": "Chrome",
         "headless": false,
         "driverPath": "executables\\win\\chromedriver.exe",
@@ -11,7 +11,7 @@
         }
     },
     "windows.chrome.local.headless": {
-        "mode": "Local",
+        "isRemote": false,
         "browser": "Chrome",
         "headless": true,
         "driverPath": "executables\\win\\chromedriver.exe",
@@ -23,7 +23,7 @@
         }
     },
     "windows.chrome.remote": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "chrome",
         "headless": false,
         "remoteUrl": "http://localhost:4444/",
@@ -36,7 +36,7 @@
         }
     },
     "windows.chrome.remote.headless": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "Chrome",
         "headless": true,
         "remoteUrl": "http://localhost:4444/",
@@ -51,7 +51,7 @@
     },
 
     "windows.firefox.local": {
-        "mode": "Local",
+        "isRemote": false,
         "browser": "Firefox",
         "headless": false,
         "driverPath": "executables\\win\\geckodriver.exe",
@@ -61,7 +61,7 @@
         }
     },
     "windows.firefox.local.headless": {
-        "mode": "Local",
+        "isRemote": false,
         "browser": "Firefox",
         "headless": true,
         "driverPath": "executables\\win\\geckodriver.exe",
@@ -73,7 +73,7 @@
         }
     },
     "windows.firefox.remote": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "Firefox",
         "headless": false,
         "remoteUrl": "http://localhost:4444/",
@@ -85,7 +85,7 @@
         }
     },
     "windows.firefox.remote.headless": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "Firefox",
         "headless": true,
         "remoteUrl": "http://localhost:4444/",
@@ -100,7 +100,7 @@
     },
 
     "windows.edge.local": {
-        "mode": "Local",
+        "isRemote": false,
         "browser": "Edge",
         "headless": false,
         "driverPath": "executables\\win\\msedgedriver.exe",
@@ -110,7 +110,7 @@
         }
     },
     "windows.edge.local.headless": {
-        "mode": "Local",
+        "isRemote": false,
         "browser": "Edge",
         "headless": true,
         "driverPath": "executables\\win\\msedgedriver.exe",
@@ -122,7 +122,7 @@
         }
     },
     "windows.edge.remote": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "Edge",
         "headless": false,
         "remoteUrl": "http://localhost:4444/",
@@ -134,7 +134,7 @@
         }
     },
     "windows.edge.remote.headless": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "Edge",
         "headless": true,
         "remoteUrl": "http://localhost:4444/",
@@ -149,7 +149,7 @@
     },
 
     "linux.chrome.local": {
-        "mode": "Local",
+        "isRemote": false,
         "headless": false,
         "driverPath": "executables/linux/chromedriver.exe",
         "arguments": [
@@ -158,7 +158,7 @@
         }
     },
     "linux.chrome.local.headless": {
-        "mode": "Local",
+        "isRemote": false,
         "headless": true,
         "driverPath": "executables/linux/chromedriver.exe",
         "arguments": [
@@ -169,7 +169,7 @@
         }
     },
     "linux.chrome.remote": {
-        "mode": "Remote",
+        "isRemote": true,
         "headless": false,
         "browser": "Chrome",
         "remoteUrl": "http://localhost:4444/",
@@ -181,7 +181,7 @@
         }
     },
     "linux.chrome.remote.headless": {
-        "mode": "Remote",
+        "isRemote": true,
         "headless": true,
         "remoteUrl": "http://localhost:4444/",
         "arguments": [
@@ -195,7 +195,7 @@
     },
 
     "linux.firefox.local": {
-        "mode": "Local",
+        "isRemote": false,
         "headless": false,
         "driverPath": "executables/linux/chromedriver.exe",
         "arguments": [
@@ -204,7 +204,7 @@
         }
     },
     "linux.firefox.local.headless": {
-        "mode": "Local",
+        "isRemote": false,
         "headless": true,
         "driverPath": "executables/linux/chromedriver.exe",
         "arguments": [
@@ -215,7 +215,7 @@
         }
     },
     "linux.firefox.remote": {
-        "mode": "Remote",
+        "isRemote": true,
         "headless": false,
         "remoteUrl": "http://localhost:4444/",
         "arguments": [
@@ -226,7 +226,7 @@
         }
     },
     "linux.firefox.remote.headless": {
-        "mode": "Remote",
+        "isRemote": true,
         "headless": true,
         "remoteUrl": "http://localhost:4444/",
         "arguments": [
@@ -240,7 +240,7 @@
     },
 
     "macos.chrome.local": {
-        "mode": "Local",
+        "isRemote": false,
         "browser": "Chrome",
         "headless": false,
         "driverPath": "executables/win/chromedriver.exe",
@@ -250,7 +250,7 @@
         }
     },
     "macos.chrome.local.headless": {
-        "mode": "Local",
+        "isRemote": false,
         "browser": "Chrome",
         "headless": true,
         "driverPath": "executables\\win\\chromedriver.exe",
@@ -262,7 +262,7 @@
         }
     },
     "macos.chrome.remote": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "Chrome",
         "headless": false,
         "remoteUrl": "http://localhost:4444/",
@@ -274,7 +274,7 @@
         }
     },
     "macos.chrome.remote.headless": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "Chrome",
         "headless": true,
         "remoteUrl": "http://localhost:4444/",
@@ -289,7 +289,7 @@
     },
 
     "saucelabs.safari.remote": {
-        "mode": "Remote",
+        "isRemote": true,
         "browser": "Safari",
         "headless": false,
         "remoteUrl": "https://oauth-dungha.tien-0358f:c399da05-ab55-47ab-80c9-75b055b0a0fb@ondemand.eu-central-1.saucelabs.com:443/wd/hub",

@@ -7,10 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
-/**
- * @author DungHa
- * @Date 11/10/2022
- */
 public class LocalSafariDriver implements IWebDriver {
 
     /**

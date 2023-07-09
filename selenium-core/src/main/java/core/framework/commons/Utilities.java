@@ -1,11 +1,14 @@
 package core.framework.commons;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import core.framework.driver.DriverProperty;
+import core.framework.driver.DriverProperties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.File;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -27,11 +30,17 @@ public class Utilities {
         logger.info("Get configurations browser " + browserSetting);
         Gson gson = new Gson();
         try {
-            Reader         reader               = Files.newBufferedReader(Paths.get(pathFile));
-            JsonObject     jsonObject           = gson.fromJson(reader, JsonObject.class);
+            Reader reader               = Files.newBufferedReader(Paths.get(pathFile));
+            JsonObject jsonObject           = gson.fromJson(reader, JsonObject.class);
             JsonObject     browserSettingObject = jsonObject.getAsJsonObject(browserSetting);
-            DriverProperty driverProperty       = gson.fromJson(browserSettingObject, DriverProperty.class);
-            driverProperty.setRemote(driverProperty.getMode().equalsIgnoreCase("remote"));
+            DriverProperty    driverProperty       = gson.fromJson(browserSettingObject, DriverProperty.class);
+
+//            ObjectMapper objectMapper = new ObjectMapper();
+//            File fileJson = new File(pathFile);
+//            DriverProperties driverProperties = objectMapper.readValue(fileJson, DriverProperties.class);
+//            driverProperty = driverProperties.getProperty(browserSetting);
+
+            driverProperty.setIsRemote(driverProperty.getIsRemote());
             return driverProperty;
         } catch (Exception ex) {
             logger.error("Read file configuration has error: " + ex.getMessage());

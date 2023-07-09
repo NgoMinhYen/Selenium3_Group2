@@ -2,10 +2,7 @@ package dataobjects;
 
 import java.util.Date;
 
-/**
- * @author DungHa
- * @Date 11/10/2022
- */
+
 public class Recruitment {
     private String firstName;
     private String middleName = "";

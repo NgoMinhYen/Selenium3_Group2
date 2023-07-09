@@ -6,11 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
-/**
- * @author YenNgo
- * @Date 11/10/2022
- *
- */
+
 
 public class Select extends Element {
     private Locator options;

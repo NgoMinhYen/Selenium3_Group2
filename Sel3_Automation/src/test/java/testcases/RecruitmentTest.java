@@ -13,10 +13,7 @@ import utils.common.constants.Constant;
 import utils.enums.LeftMenu;
 import utils.enums.RecruitmentColumnHeader;
 
-/**
- * @author DungHa
- * @Date 11/10/2022
- */
+
 public class RecruitmentTest extends BaseTest {
     private LoginPage           loginPage = LoginPage.getInstance();
     private PIMPage             pimPage;

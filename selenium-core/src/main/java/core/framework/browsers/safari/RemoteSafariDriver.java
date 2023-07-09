@@ -9,10 +9,7 @@ import org.openqa.selenium.safari.SafariOptions;
 
 import java.net.URL;
 
-/**
- * @author DungHa
- * @Date 11/10/2022
- */
+
 public class RemoteSafariDriver implements IWebDriver {
 
 

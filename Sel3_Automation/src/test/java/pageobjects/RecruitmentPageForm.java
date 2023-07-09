@@ -7,10 +7,7 @@ import dataobjects.Recruitment;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.Keys;
 
-/**
- * @author DungHa
- * @Date 11/10/2022
- */
+
 public class RecruitmentPageForm extends AbstractPage {
     private static RecruitmentPageForm instance                 = null;
     private        IElement            txtFirstName             = new Element(Locator.xpath("//input[@name='firstName']"));

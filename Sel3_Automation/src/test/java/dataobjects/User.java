@@ -1,9 +1,6 @@
 package dataobjects;
 
-/**
- * @author DungHa
- * @Date 11/10/2022
- */
+
 public class User {
     private String username;
     private String password;

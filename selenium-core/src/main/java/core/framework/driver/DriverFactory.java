@@ -25,7 +25,7 @@ public class DriverFactory {
      */
     public static WebDriver createWebDriver(DriverProperty property) {
         WebDriver driver;
-        logger.info(String.format("Create webdriver on %s, remote=%s", property.getBrowser(), property.isRemote()));
+        logger.info(String.format("Create webdriver on %s, remote=%s", property.getBrowser(), property.getMode()));
 
         String className = String.format("core.framework.browsers.%s.%s%sDriver", StringUtils.lowerCase(property.getBrowser()), StringUtils.capitalize(property.getMode()), StringUtils.capitalize(property.getBrowser()));
         logger.info("Create webdriver " + className);

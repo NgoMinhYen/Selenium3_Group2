@@ -1,8 +1,5 @@
 package dataobjects;
-/**
- * @author YenNgo
- * @Date 11/10/2022
- */
+
 public class DataAssignLeave {
     private String employeeName;
     private String leaveType;
