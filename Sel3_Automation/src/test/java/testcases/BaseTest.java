@@ -19,7 +19,7 @@ import java.util.Objects;
 public class BaseTest {
 
     protected     Logger logger                  = new Logger();
-    private final String DEFAULT_BROWSER_SETTING = "windows.firefox.remote";
+    private final String DEFAULT_BROWSER_SETTING = "windows.chrome.local";
 
     private ThreadLocal<DriverProperty> thDriverProperty = new ThreadLocal<>();
 
@@ -28,11 +28,6 @@ public class BaseTest {
     @BeforeMethod(alwaysRun = true)
     public void createWebDriver(
             @Optional(DEFAULT_BROWSER_SETTING) String browserSetting) {
-//        String testEnv = System.getProperty("environment");
-//        if (Objects.nonNull(testEnv)) {
-//            browserSetting = testEnv;
-//      //      Allure.parameter(Constant.BROWSER_SETTING, browserSetting);
-//        }
 
         DriverProperty property = Utilities.loadBrowserSetting(Constant.BROWSER_SETTING_PATH, browserSetting);
         thDriverProperty.set(property);

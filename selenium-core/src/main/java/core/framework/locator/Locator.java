@@ -8,7 +8,7 @@ public class Locator {
     private String      value;
 
     /**
-     * Get element by xpath return locator
+     * Get element by xpath return locator (bọc cái by lại)
      */
     public static Locator xpath(String value) {
         Locator locator = new Locator();
