@@ -6,16 +6,15 @@ import core.framework.driver.DriverProperty;
 import core.framework.wrappers.Driver;
 import io.qameta.allure.Allure;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 import utils.common.constants.Constant;
+import utils.listeners.AllureReportListener;
 import utils.logs.Logger;
 
 import java.io.IOException;
 import java.util.Objects;
 
+@Listeners(AllureReportListener.class)
 public class BaseTest {
 
     protected     Logger logger                  = new Logger();

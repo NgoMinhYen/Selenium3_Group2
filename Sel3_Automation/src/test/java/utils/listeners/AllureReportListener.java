@@ -64,10 +64,6 @@ public class AllureReportListener implements ITestListener {
     @Override
     public void onTestStart(ITestResult iTestResult) {
         ThreadContext.put("testcaseName", getTestName(iTestResult));
-//        String testcaseName = getTestName(iTestResult);
-//        currentTestCase.set(testcaseName);
-//        logger.info(currentTestCase.get() + " hehe...");
-//        logger.info(testcaseName + " haha...");
         logger.info(getTestName(iTestResult) + " test is starting...");
     }
 
