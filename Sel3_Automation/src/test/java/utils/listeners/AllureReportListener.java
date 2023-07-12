@@ -6,6 +6,7 @@ import io.qameta.allure.model.Status;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.ThreadContext;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -17,6 +18,8 @@ import static io.qameta.allure.Allure.getLifecycle;
 
 public class AllureReportListener implements ITestListener {
     private static Logger logger = LogManager.getLogger(AllureReportListener.class);
+    private static ThreadLocal<String> currentTestCase = new ThreadLocal<>();
+
 
     public String getTestName(ITestResult result) {
         return result.getTestName() != null ? result.getTestName()
@@ -60,11 +63,17 @@ public class AllureReportListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
+        ThreadContext.put("testcaseName", getTestName(iTestResult));
+//        String testcaseName = getTestName(iTestResult);
+//        currentTestCase.set(testcaseName);
+//        logger.info(currentTestCase.get() + " hehe...");
+//        logger.info(testcaseName + " haha...");
         logger.info(getTestName(iTestResult) + " test is starting...");
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
+        ThreadContext.remove("testcaseName");
         logger.info(getTestName(iTestResult) + " test is passed.");
     }
 
