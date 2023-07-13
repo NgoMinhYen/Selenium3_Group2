@@ -28,12 +28,12 @@ public class Logger {
         final String uuid = UUID.randomUUID().toString();
         getLifecycle().startStep(uuid, new StepResult().setName(message).setStatus(Status.PASSED));
 
-        try {
-            File src = ((TakesScreenshot) Driver.getWebDriver()).getScreenshotAs(OutputType.FILE);
-            getLifecycle().addAttachment(uuid, "image/png", ".png", Files.readAllBytes(src.toPath()));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            File src = ((TakesScreenshot) Driver.getWebDriver()).getScreenshotAs(OutputType.FILE);
+//            getLifecycle().addAttachment(uuid, "image/png", ".png", Files.readAllBytes(src.toPath()));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
 
         getLifecycle().stopStep(uuid);
 
